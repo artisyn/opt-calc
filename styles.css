@@ -1,0 +1,235 @@
+/* style renew */
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* removing arrows from input Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+:root {
+	--special-color: #262e4b;
+	--input-container: #ebebeb;
+	--results-container: #000000;
+	--style1-color: #000000;
+	--style2-color: #3b5ec5;
+	--style3-color: #c05b28;
+	--style4-color: #b1a22b;
+	--style5-color: #2f872d;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #cbcbc7;
+	background-image: linear-gradient(
+		to right bottom,
+		#cbcdce,
+		#c4c7c8,
+		#bec1c3,
+		#b7babd,
+		#b1b4b8
+	);
+	padding: 2rem;
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: 0.4rem;
+}
+main {
+	/* border: 1px solid white; */
+	margin-top: 2rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 1rem;
+}
+
+.container {
+	border: 1px solid red;
+	border-radius: 1rem;
+	flex: 1;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* decoration */
+.input__container-decoration {
+	position: absolute;
+	width: 80%;
+	height: 110%;
+	border: 1px solid white;
+	border-radius: 1rem;
+	z-index: -1;
+	background-color: #e8eced46;
+	left: 10%;
+	top: -5%;
+}
+
+.input__container {
+	/* border: 1px solid black; */
+	position: relative;
+	width: 90vw;
+	max-width: 43rem;
+}
+/* main user input container */
+.input__container-item {
+	border-radius: 0.5rem;
+	background-color: var(--input-container);
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	display: flex;
+	gap: 2%;
+	align-items: center;
+	max-width: 43rem;
+	flex-wrap: wrap;
+}
+/* individual inputs */
+.input-type {
+	font-weight: 500;
+
+	min-width: fit-content;
+	min-width: 7.6rem;
+}
+
+/* user case number input */
+.input-count {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.input-spread {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.input-desired {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.input-result {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input__container-parameters {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	margin-bottom: 1rem;
+}
+.input-time {
+	font-size: 2rem;
+}
+
+/* final results */
+.input__container-results {
+	border-radius: 0.5rem;
+	background-color: var(--results-container);
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	color: white;
+	max-width: 43rem;
+}
+
+/* helpers */
+
+.special-color {
+	color: var(--special-color);
+}
+
+.num-input {
+	width: 4rem;
+	height: 2rem;
+	border: 1px solid black;
+	border-radius: 0.3rem;
+	padding: 6%;
+	font-size: 1.2rem;
+	outline: none;
+	border: none;
+	color: #1f1f1fef;
+}
+.input-name {
+	white-space: nowrap;
+	font-style: italic;
+}
+
+.style1 {
+	color: var(--style1-color);
+	border: 1px solid var(--style1-color);
+}
+.style2 {
+	color: var(--style2-color);
+	border: 1px solid var(--style2-color);
+}
+.style3 {
+	color: var(--style3-color);
+	border: 1px solid var(--style3-color);
+}
+.style4 {
+	color: var(--style4-color);
+	border: 1px solid var(--style4-color);
+}
+.style5 {
+	color: var(--style5-color);
+	border: 1px solid var(--style5-color);
+}
+.btn-recalc {
+	border: 2px solid white;
+	border-radius: 1.5rem;
+	background-color: black;
+	color: white;
+	padding: 0.6rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.btn-recalc:hover {
+	background-color: white;
+	color: black;
+}
+
+/* font awesome icon styles */
+
+.fas,
+.far {
+	color: rgba(59, 59, 59, 0.746);
+	font-size: 1.4rem;
+	cursor: pointer;
+	transition: all ease 0.3s;
+}
+
+.fas:hover,
+.far:hover {
+	color: rgba(161, 161, 161, 0.726);
+}
+
+/* create time input */
