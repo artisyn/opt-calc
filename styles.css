@@ -66,7 +66,7 @@ main {
 }
 
 .container {
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	border-radius: 1rem;
 	flex: 1;
 	padding: 1rem;
@@ -177,6 +177,7 @@ main {
 	outline: none;
 	border: none;
 	color: #1f1f1fef;
+	text-align: center;
 }
 .input-name {
 	white-space: nowrap;
@@ -232,4 +233,23 @@ main {
 	color: rgba(161, 161, 161, 0.726);
 }
 
-/* create time input */
+.hh1,
+.hh2,
+.min1,
+.min2 {
+	width: 4rem;
+	height: 3rem;
+	border: 2px solid lightblue;
+	border-radius: 0.5rem;
+	padding: 5%;
+	text-align: center;
+	font-size: 1.3rem;
+}
+
+.time-spread {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: 600;
+	font-style: italic;
+}
