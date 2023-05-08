@@ -27,12 +27,12 @@ input[type='number'] {
 :root {
 	--special-color: #262e4b;
 	--input-container: #ebebeb;
-	--results-container: #000000;
-	--style1-color: #000000;
-	--style2-color: #3b5ec5;
+	--results-container: #353535;
+	--style1-color: #3b5ec5;
+	--style2-color: #2f872d;
 	--style3-color: #c05b28;
 	--style4-color: #b1a22b;
-	--style5-color: #2f872d;
+	--style5-color: #662d87;
 }
 
 body {
@@ -159,6 +159,8 @@ main {
 	padding: 0.5rem;
 	color: white;
 	max-width: 43rem;
+	display: flex;
+	gap: 1rem;
 }
 
 /* helpers */
@@ -252,4 +254,66 @@ main {
 	gap: 0.5rem;
 	font-weight: 600;
 	font-style: italic;
+}
+
+.scResult,
+.cbTimeResult,
+.domfiResult,
+.fEyesResult,
+.fuResult {
+	background-color: #32323264;
+	color: white;
+	width: 5rem;
+}
+
+.btn-result {
+	background-color: white;
+	color: black;
+	border-radius: 0.4rem;
+	padding: 0.7rem;
+	font-size: 1rem;
+	font-weight: 600;
+	font-style: italic;
+	cursor: pointer;
+	transition: all ease 0.3s;
+}
+.btn-result:hover {
+	background-color: #d2d4d5;
+	color: #344a53;
+}
+
+.result__pallete-container {
+	border-radius: 0.4rem;
+	flex: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	overflow: hidden;
+}
+.result__pallete-cb {
+	background-color: var(--style1-color);
+	height: 100%;
+}
+.result__pallete-domfi {
+	background-color: var(--style2-color);
+	height: 100%;
+}
+.result__pallete-fEyes {
+	background-color: var(--style3-color);
+	height: 100%;
+}
+.result__pallete-fu {
+	background-color: var(--style4-color);
+	height: 100%;
+}
+.result__pallete-sc {
+	background-color: var(--style5-color);
+	height: 100%;
+}
+
+.monitoring {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }

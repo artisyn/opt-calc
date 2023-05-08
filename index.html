@@ -60,10 +60,7 @@
 						</div>
 						<div class="input-result">
 							<div class="input-name">Time spent (auto)</div>
-							<input
-								class="num-input cbTimeResult"
-								type="number"
-							/>
+							<input class="num-input cbTimeResult" type="text" />
 						</div>
 					</div>
 					<div class="input__container-item style2">
@@ -99,10 +96,7 @@
 						</div>
 						<div class="input-result">
 							<div class="input-name">Time spent (auto)</div>
-							<input
-								class="num-input domfiResult"
-								type="number"
-							/>
+							<input class="num-input domfiResult" type="text" />
 						</div>
 					</div>
 					<div class="input__container-item style3">
@@ -138,10 +132,7 @@
 
 						<div class="input-result">
 							<div class="input-name">Time spent (auto)</div>
-							<input
-								class="num-input fEyesResult"
-								type="number"
-							/>
+							<input class="num-input fEyesResult" type="text" />
 						</div>
 					</div>
 					<div class="input__container-item style4">
@@ -177,7 +168,7 @@
 						</div>
 						<div class="input-result">
 							<div class="input-name">Time spent (auto)</div>
-							<input class="num-input fuResult" type="number" />
+							<input class="num-input fuResult" type="text" />
 						</div>
 					</div>
 					<div class="input__container-item style5">
@@ -213,33 +204,9 @@
 						</div>
 						<div class="input-result">
 							<div class="input-name">Time spent (auto)</div>
-							<input class="num-input scResult" type="number" />
+							<input class="num-input scResult" type="text" />
 						</div>
 					</div>
-					<!-- <div class="input__container-item style1">
-						<div class="input-type">Default Task</div>
-						<div class="input-count">
-							<div class="input-name">Default Name</div>
-							<div class="input-wrapper">
-								<i class="far fa-minus-square"></i>
-								<input class="num-input" type="number" />
-								<i class="far fa-plus-square"></i>
-							</div>
-						</div>
-
-						<div class="input-desired">
-							<div class="input-name">Time Per Case</div>
-							<input class="num-input" type="number" />
-						</div>
-						<div class="input-spread">
-							<div class="input-name">Spread in %</div>
-							<input class="num-input" type="number" />
-						</div>
-						<div class="input-result">
-							<div class="input-name">Time spent (auto)</div>
-							<input class="num-input" type="number" />
-						</div>
-					</div> -->
 					<div class="input__container-parameters">
 						<h3>Today's time:</h3>
 						<div class="time-wrapper">
@@ -249,6 +216,7 @@
 								value="0"
 								max="9"
 								min="0"
+								readonly
 							/>
 							<input
 								type="number"
@@ -258,7 +226,7 @@
 								min="0"
 							/>
 							<span>:</span>
-							<input type="number" class="min1" value="0" />
+							<input type="number" class="min1" value="1" />
 							<input type="number" class="min2" value="0" />
 						</div>
 						<div class="time-spread">
@@ -272,8 +240,18 @@
 					</div>
 
 					<div class="input__container-results">
-						results
-						<button class="btn-result">Show Results</button>
+						<button class="btn-result">Calculate</button>
+						<div class="result__pallete-container">
+							<div class="result__pallete-cb"></div>
+							<div class="result__pallete-domfi"></div>
+							<div class="result__pallete-fEyes"></div>
+							<div class="result__pallete-fu"></div>
+							<div class="result__pallete-sc"></div>
+						</div>
+						<div class="monitoring">
+							<div class="input-name">Unused Time</div>
+							<div class="time-left">00 : 00</div>
+						</div>
 					</div>
 					<div class="input__container-decoration"></div>
 				</div>
