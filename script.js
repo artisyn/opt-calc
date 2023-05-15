@@ -10,6 +10,18 @@ const cbSpread = document.querySelector('.cbSpread');
 // result
 const cbTimeResult = document.querySelector('.cbTimeResult');
 
+// PM CB
+// cases
+const pmCbCases = document.querySelector('.pmCb');
+const addPmCb = document.querySelector('.pmCbPlus');
+const removePmCb = document.querySelector('.pmCbMinus');
+// target time
+const pmCbTargetTime = document.querySelector('.pmCbTargetTime');
+// spread
+const pmCbSpread = document.querySelector('.pmCbSpread');
+// result
+const pmCbTimeResult = document.querySelector('.pmCbResult');
+
 // Domestic
 // cases
 const domfiCases = document.querySelector('.domfi');
@@ -22,7 +34,19 @@ const domfiSpread = document.querySelector('.domfiSpread');
 // result
 const domfiTimeResult = document.querySelector('.domfiResult');
 
-// 4eyes
+// PM DOMFI
+// cases
+const pmDomfiCases = document.querySelector('.pmDomfi');
+const addPmDomfi = document.querySelector('.pmDomfiPlus');
+const removePmDomfi = document.querySelector('.pmDomfiMinus');
+// target time
+const pmDomfiTargetTime = document.querySelector('.pmDomfiTargetTime');
+// spread
+const pmDomfiSpread = document.querySelector('.pmDomfiSpread');
+// result
+const pmDomfiTimeResult = document.querySelector('.pmDomfiResult');
+
+// 4eyes CB
 // cases
 const fEyesCases = document.querySelector('.fEyes');
 const addFeyes = document.querySelector('.fEyesPlus');
@@ -33,6 +57,18 @@ const fEyesTargetTime = document.querySelector('.fEyesTargetTime');
 const fEyesSpread = document.querySelector('.fEyesSpread');
 // result
 const fEyesTimeResult = document.querySelector('.fEyesResult');
+
+// 4eyes DOMFI
+// cases
+const fEyesDomfiCases = document.querySelector('.fEyesDomfi');
+const addDomfiFeyes = document.querySelector('.fEyesDomfiPlus');
+const removeDomfiFeyes = document.querySelector('.fEyesDomfiMinus');
+// target time
+const fEyesDomfiTargetTime = document.querySelector('.fEyesDomfiTargetTime');
+// spread
+const fEyesDomfiSpread = document.querySelector('.fEyesDomfiSpread');
+// result
+const fEyesDomfiTimeResult = document.querySelector('.fEyesDomfiResult');
 
 // Follow up
 // cases
@@ -71,8 +107,13 @@ const timeRnd = document.querySelector('.time-rnd');
 
 const resultBtn = document.querySelector('.btn-result');
 const resultPalletCb = document.querySelector('.result__pallete-cb');
+const resultPalletPmCb = document.querySelector('.result__pallete-pmCb');
 const resultPalletDomfi = document.querySelector('.result__pallete-domfi');
+const resultPalletPmDomfi = document.querySelector('.result__pallete-pmDomfi');
 const resultPalletFeyes = document.querySelector('.result__pallete-fEyes');
+const resultPalletDomfiFeyes = document.querySelector(
+	'.result__pallete-domfiFeyes'
+);
 const resultPalletFu = document.querySelector('.result__pallete-fu');
 const resultPalletSc = document.querySelector('.result__pallete-sc');
 
@@ -109,15 +150,32 @@ addCb.addEventListener('click', (e) => incrementByOne(cbCases));
 cbCases.addEventListener('input', (e) => checkLimits(e.target, 350, 0));
 removeCb.addEventListener('click', (e) => decrementByOne(cbCases));
 
+// PM CB
+addPmCb.addEventListener('click', (e) => incrementByOne(pmCbCases));
+pmCbCases.addEventListener('input', (e) => checkLimits(e.target, 350, 0));
+removePmCb.addEventListener('click', (e) => decrementByOne(pmCbCases));
+
 // DOMFI
 addDomfi.addEventListener('click', (e) => incrementByOne(domfiCases));
 domfiCases.addEventListener('input', (e) => checkLimits(e.target, 350, 0));
 removeDomfi.addEventListener('click', (e) => decrementByOne(domfiCases));
 
-// 4EYES
+// PM DOMFI
+addPmDomfi.addEventListener('click', (e) => incrementByOne(pmDomfiCases));
+pmDomfiCases.addEventListener('input', (e) => checkLimits(e.target, 350, 0));
+removePmDomfi.addEventListener('click', (e) => decrementByOne(pmDomfiCases));
+
+// 4EYES CB
 addFeyes.addEventListener('click', (e) => incrementByOne(fEyesCases));
 fEyesCases.addEventListener('input', (e) => checkLimits(e.target, 350, 0));
 removeFeyes.addEventListener('click', (e) => decrementByOne(fEyesCases));
+
+// 4EYES DOMFI
+addDomfiFeyes.addEventListener('click', (e) => incrementByOne(fEyesDomfiCases));
+fEyesDomfiCases.addEventListener('input', (e) => checkLimits(e.target, 350, 0));
+removeDomfiFeyes.addEventListener('click', (e) =>
+	decrementByOne(fEyesDomfiCases)
+);
 
 // FOLLOW UPS
 addFu.addEventListener('click', (e) => incrementByOne(fuCases));
@@ -220,6 +278,14 @@ const calculateCbTime = () => {
 	let finalCbTime = adjustPercent(totalTime, +cbSpread.value);
 	return finalCbTime;
 };
+// calculate PM CB line ;
+const calculatePmCbTime = () => {
+	let caseCount = +pmCbCases.value;
+	let targetKpi = +pmCbTargetTime.value;
+	let totalTime = caseCount * targetKpi * 60;
+	let finalPmCbTime = adjustPercent(totalTime, +pmCbSpread.value);
+	return finalPmCbTime;
+};
 // calculate domfi line
 const calculateDomfiTime = () => {
 	let caseCount = +domfiCases.value;
@@ -228,12 +294,28 @@ const calculateDomfiTime = () => {
 	let finalDomfiTime = adjustPercent(totalTime, +domfiSpread.value);
 	return finalDomfiTime;
 };
-// calculate Feyes line
+// calculate PM DOMFI line
+const calculatePmDomfiTime = () => {
+	let caseCount = +pmDomfiCases.value;
+	let targetKpi = +pmDomfiTargetTime.value;
+	let totalTime = caseCount * targetKpi * 60;
+	let finalPmDomfiTime = adjustPercent(totalTime, +pmDomfiSpread.value);
+	return finalPmDomfiTime;
+};
+// calculate Feyes CB line
 const calculateFeyesTime = () => {
 	let caseCount = +fEyesCases.value;
 	let targetKpi = +fEyesTargetTime.value;
 	let totalTime = caseCount * targetKpi * 60;
 	let finalFeyesTime = adjustPercent(totalTime, +fEyesSpread.value);
+	return finalFeyesTime;
+};
+// calculate Feyes DOMFI line
+const calculateFeyesDomfiTime = () => {
+	let caseCount = +fEyesDomfiCases.value;
+	let targetKpi = +fEyesDomfiTargetTime.value;
+	let totalTime = caseCount * targetKpi * 60;
+	let finalFeyesTime = adjustPercent(totalTime, +fEyesDomfiSpread.value);
 	return finalFeyesTime;
 };
 // calculate SC line
@@ -263,15 +345,30 @@ const calculateFinals = () => {
 	resultPalletCb.style.width =
 		timeToPercentage(finalTodaysTime, cbTime) + '%';
 
+	let pmCbTime = calculatePmCbTime();
+	pmCbTimeResult.value = secondsToHoursAndMinutes(pmCbTime);
+	resultPalletPmCb.style.width =
+		timeToPercentage(finalTodaysTime, pmCbTime) + '%';
+
 	let domfiTime = calculateDomfiTime();
 	domfiTimeResult.value = secondsToHoursAndMinutes(domfiTime);
 	resultPalletDomfi.style.width =
 		timeToPercentage(finalTodaysTime, domfiTime) + '%';
 
+	let pmDomfiTime = calculatePmDomfiTime();
+	pmDomfiTimeResult.value = secondsToHoursAndMinutes(pmDomfiTime);
+	resultPalletPmDomfi.style.width =
+		timeToPercentage(finalTodaysTime, pmDomfiTime) + '%';
+
 	let fEyesTime = calculateFeyesTime();
 	fEyesTimeResult.value = secondsToHoursAndMinutes(fEyesTime);
 	resultPalletFeyes.style.width =
 		timeToPercentage(finalTodaysTime, fEyesTime) + '%';
+
+	let fEyesDomfiTime = calculateFeyesDomfiTime();
+	fEyesDomfiTimeResult.value = secondsToHoursAndMinutes(fEyesDomfiTime);
+	resultPalletDomfiFeyes.style.width =
+		timeToPercentage(finalTodaysTime, fEyesDomfiTime) + '%';
 
 	let fuTime = calculateFuTime();
 	fuTimeResult.value = secondsToHoursAndMinutes(fuTime);
@@ -285,8 +382,21 @@ const calculateFinals = () => {
 
 	// calculate total today's time minus all the lines;
 	let monitoringTime =
-		finalTodaysTime - cbTime - domfiTime - fEyesTime - fuTime - scTime;
-	timeLeft.innerHTML = secondsToHoursAndMinutes(monitoringTime);
+		finalTodaysTime -
+		cbTime -
+		pmCbTime -
+		domfiTime -
+		pmDomfiTime -
+		fEyesTime -
+		fEyesDomfiTime -
+		fuTime -
+		scTime;
+
+	if (monitoringTime < 0) {
+		timeLeft.innerHTML = "You overcompleted today's goal!";
+	} else {
+		timeLeft.innerHTML = secondsToHoursAndMinutes(monitoringTime);
+	}
 };
 
 resultBtn.addEventListener('click', (e) => {

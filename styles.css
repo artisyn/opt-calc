@@ -33,6 +33,7 @@ input[type='number'] {
 	--style3-color: #c05b28;
 	--style4-color: #b1a22b;
 	--style5-color: #662d87;
+	--style6-color: #ab7e35;
 }
 
 body {
@@ -206,6 +207,10 @@ main {
 	color: var(--style5-color);
 	border: 1px solid var(--style5-color);
 }
+.style6 {
+	color: var(--style6-color);
+	border: 1px solid var(--style6-color);
+}
 .btn-recalc {
 	border: 2px solid white;
 	border-radius: 1.5rem;
@@ -258,8 +263,11 @@ main {
 
 .scResult,
 .cbTimeResult,
+.pmDomfiResult,
+.pmCbResult,
 .domfiResult,
 .fEyesResult,
+.fEyesDomfiResult,
 .fuResult {
 	background-color: #32323264;
 	color: white;
@@ -291,6 +299,10 @@ main {
 	gap: 0.5rem;
 	overflow: hidden;
 }
+.result__pallete-pmCb {
+	background-color: var(--style1-color);
+	height: 100%;
+}
 .result__pallete-cb {
 	background-color: var(--style1-color);
 	height: 100%;
@@ -299,8 +311,16 @@ main {
 	background-color: var(--style2-color);
 	height: 100%;
 }
+.result__pallete-pmDomfi {
+	background-color: var(--style2-color);
+	height: 100%;
+}
 .result__pallete-fEyes {
 	background-color: var(--style3-color);
+	height: 100%;
+}
+.result__pallete-domfiFeyes {
+	background-color: var(--style6-color);
 	height: 100%;
 }
 .result__pallete-fu {

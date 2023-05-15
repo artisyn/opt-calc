@@ -41,7 +41,6 @@
 								<i class="far fa-plus-square cbPlus"></i>
 							</div>
 						</div>
-
 						<div class="input-desired">
 							<div class="input-name">Time Per Case</div>
 							<input
@@ -55,12 +54,47 @@
 							<input
 								class="num-input cbSpread"
 								type="number"
-								value="5"
+								value="3"
 							/>
 						</div>
 						<div class="input-result">
 							<div class="input-name">Time spent (auto)</div>
 							<input class="num-input cbTimeResult" type="text" />
+						</div>
+					</div>
+					<div class="input__container-item style1">
+						<div class="input-type">PMs (CB)</div>
+						<div class="input-count">
+							<div class="input-name">Case Count</div>
+							<div class="input-wrapper">
+								<i class="far fa-minus-square pmCbMinus"></i>
+								<input
+									class="num-input pmCb"
+									type="number"
+									value="0"
+								/>
+								<i class="far fa-plus-square pmCbPlus"></i>
+							</div>
+						</div>
+						<div class="input-desired">
+							<div class="input-name">Time Per Case</div>
+							<input
+								class="num-input pmCbTargetTime"
+								type="number"
+								value="2.2"
+							/>
+						</div>
+						<div class="input-spread">
+							<div class="input-name">Random in %</div>
+							<input
+								class="num-input pmCbSpread"
+								type="number"
+								value="3"
+							/>
+						</div>
+						<div class="input-result">
+							<div class="input-name">Time spent (auto)</div>
+							<input class="num-input pmCbResult" type="text" />
 						</div>
 					</div>
 					<div class="input__container-item style2">
@@ -77,7 +111,6 @@
 								<i class="far fa-plus-square domfiPlus"></i>
 							</div>
 						</div>
-
 						<div class="input-desired">
 							<div class="input-name">Time Per Case</div>
 							<input
@@ -91,7 +124,7 @@
 							<input
 								class="num-input domfiSpread"
 								type="number"
-								value="5"
+								value="3"
 							/>
 						</div>
 						<div class="input-result">
@@ -99,8 +132,46 @@
 							<input class="num-input domfiResult" type="text" />
 						</div>
 					</div>
+					<div class="input__container-item style2">
+						<div class="input-type">PMs (DOMFI)</div>
+						<div class="input-count">
+							<div class="input-name">Case Count</div>
+							<div class="input-wrapper">
+								<i class="far fa-minus-square pmDomfiMinus"></i>
+								<input
+									class="num-input pmDomfi"
+									type="number"
+									value="0"
+								/>
+								<i class="far fa-plus-square pmDomfiPlus"></i>
+							</div>
+						</div>
+						<div class="input-desired">
+							<div class="input-name">Time Per Case</div>
+							<input
+								class="num-input pmDomfiTargetTime"
+								type="number"
+								value="2"
+							/>
+						</div>
+						<div class="input-spread">
+							<div class="input-name">Random in %</div>
+							<input
+								class="num-input pmDomfiSpread"
+								type="number"
+								value="3"
+							/>
+						</div>
+						<div class="input-result">
+							<div class="input-name">Time spent (auto)</div>
+							<input
+								class="num-input pmDomfiResult"
+								type="text"
+							/>
+						</div>
+					</div>
 					<div class="input__container-item style3">
-						<div class="input-type">4 EYES</div>
+						<div class="input-type">4 EYES (CB)</div>
 						<div class="input-count">
 							<div class="input-name">Case Count</div>
 							<div class="input-wrapper">
@@ -118,7 +189,7 @@
 							<input
 								class="num-input fEyesTargetTime"
 								type="number"
-								value="3"
+								value="3.5"
 							/>
 						</div>
 						<div class="input-spread">
@@ -126,7 +197,7 @@
 							<input
 								class="num-input fEyesSpread"
 								type="number"
-								value="5"
+								value="3"
 							/>
 						</div>
 
@@ -135,6 +206,51 @@
 							<input class="num-input fEyesResult" type="text" />
 						</div>
 					</div>
+					<div class="input__container-item style6">
+						<div class="input-type">4 EYES (DOMFI)</div>
+						<div class="input-count">
+							<div class="input-name">Case Count</div>
+							<div class="input-wrapper">
+								<i
+									class="far fa-minus-square fEyesDomfiMinus"
+								></i>
+								<input
+									class="num-input fEyesDomfi"
+									type="number"
+									value="0"
+								/>
+								<i
+									class="far fa-plus-square fEyesDomfiPlus"
+								></i>
+							</div>
+						</div>
+
+						<div class="input-desired">
+							<div class="input-name">Time Per Case</div>
+							<input
+								class="num-input fEyesDomfiTargetTime"
+								type="number"
+								value="3.5"
+							/>
+						</div>
+						<div class="input-spread">
+							<div class="input-name">Random in %</div>
+							<input
+								class="num-input fEyesDomfiSpread"
+								type="number"
+								value="3"
+							/>
+						</div>
+
+						<div class="input-result">
+							<div class="input-name">Time spent (auto)</div>
+							<input
+								class="num-input fEyesDomfiResult"
+								type="text"
+							/>
+						</div>
+					</div>
+
 					<div class="input__container-item style4">
 						<div class="input-type">FOLLOW UPS</div>
 						<div class="input-count">
@@ -163,7 +279,7 @@
 							<input
 								class="num-input fuSpread"
 								type="number"
-								value="5"
+								value="3"
 							/>
 						</div>
 						<div class="input-result">
@@ -199,7 +315,7 @@
 							<input
 								class="num-input scSpread"
 								type="number"
-								value="5"
+								value="3"
 							/>
 						</div>
 						<div class="input-result">
@@ -233,7 +349,7 @@
 							<input
 								type="number"
 								class="num-input time-rnd"
-								value="5"
+								value="4"
 							/>
 							<div class="input-name">Random in %</div>
 						</div>
@@ -243,8 +359,11 @@
 						<button class="btn-result">Calculate</button>
 						<div class="result__pallete-container">
 							<div class="result__pallete-cb"></div>
+							<div class="result__pallete-pmCb"></div>
 							<div class="result__pallete-domfi"></div>
+							<div class="result__pallete-pmDomfi"></div>
 							<div class="result__pallete-fEyes"></div>
+							<div class="result__pallete-domfiFeyes"></div>
 							<div class="result__pallete-fu"></div>
 							<div class="result__pallete-sc"></div>
 						</div>
